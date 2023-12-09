@@ -14,7 +14,7 @@ Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como cr
     
     3 - Depois escolha como você deseja criar seu pipeline, yaml ou Editor Classico. (Nesse caso vamos criar por editor Classico)
     
-    ![Untitled](Como%20criar%20uma%20Release%20e%20fazer%20Deploy%20em%20um%20App%20Se%20cd57e244275e40c692e55fa2f8fb6315/Untitled.png)
+    ![Untitled](imagens/Untitled.png)
     
     ![Untitled](Como%20criar%20uma%20Release%20e%20fazer%20Deploy%20em%20um%20App%20Se%20cd57e244275e40c692e55fa2f8fb6315/Untitled%201.png)
     
