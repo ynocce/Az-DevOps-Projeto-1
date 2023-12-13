@@ -1,5 +1,16 @@
 # Como criar uma Release e fazer Deploy em um App Service.
 
+<!-- head -->
+<script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
+
+
+<!-- inside body, where you want to create the card -->
+<div class="repo-card" data-repo="username/repository"></div>
+
+<!-- NEW: for dark theme just set data-theme attribute -->
+<div class="repo-card" data-repo="username/repository" data-theme="dark-theme"></div>
+
+
 Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como criar uma pipeline/release e fazer um deploy em um App Servicem, utilizando o Azure DevOps.
 
 - Criando uma Pipeline Classic Editor
