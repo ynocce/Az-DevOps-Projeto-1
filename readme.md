@@ -1,15 +1,6 @@
 # Como criar uma Release e fazer Deploy em um App Service.
 
-<!-- head -->
-<script src="https://tarptaeya.github.io/repo-card/repo-card.js"></script>
-
-
-<!-- inside body, where you want to create the card -->
-<div class="repo-card" data-repo="[ynocc/repository](https://github.com/ynocce/Az-DevOps-Projeto-1)"></div>
-
-<!-- NEW: for dark theme just set data-theme attribute -->
-<div class="repo-card" data-repo="[username/repository](https://github.com/ynocce/Az-DevOps-Projeto-1)" data-theme="dark-theme"></div>
-
+[![ynocce/Az-DevOps-Projeto-1 - GitHub](https://gh-card.dev/repos/ynocce/Az-DevOps-Projeto-1.svg)](https://github.com/ynocce/Az-DevOps-Projeto-1)
 
 Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como criar uma pipeline/release e fazer um deploy em um App Servicem, utilizando o Azure DevOps.
 
