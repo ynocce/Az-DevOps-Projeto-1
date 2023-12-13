@@ -1,7 +1,5 @@
 # Como criar uma Release e fazer Deploy em um App Service.
 
-[![ynocce/Az-DevOps-Projeto-1 - GitHub](https://gh-card.dev/repos/ynocce/Az-DevOps-Projeto-1.svg)](https://github.com/ynocce/Az-DevOps-Projeto-1)
-
 Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como criar uma pipeline/release e fazer um deploy em um App Servicem, utilizando o Azure DevOps.
 
 - Criando uma Pipeline Classic Editor
