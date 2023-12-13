@@ -1,10 +1,5 @@
 # Como criar uma Release e fazer Deploy em um App Service.
 
-<div align="center">
-  <a href="https://github.com/ynocce">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ynocce&layout=compact&langs_count=16&theme=merko"/>
-</div>
-
 Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como criar uma pipeline/release e fazer um deploy em um App Servicem, utilizando o Azure DevOps.
 
 - Criando uma Pipeline Classic Editor
