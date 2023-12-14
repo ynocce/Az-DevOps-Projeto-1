@@ -2,68 +2,72 @@
 
 Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como criar uma pipeline/release e fazer um deploy em um App Servicem, utilizando o Azure DevOps.
 
-- Criando uma Pipeline Classic Editor
+##
+
+- **Criando uma Pipeline Classic Editor.**
     
     Primeiro acessamos o Azure DevOps.
     
     Nesse caso, gerei uma build .NET, atráves do Visual Studio e mandei para meu repos no Azure DevOps.
     
-    1 - Clique em Pipelines 
+    **1** - Clique em Pipelines 
     
-    2 - Clique em Create Pipeline.
+    **2** - Clique em Create Pipeline.
     
-    3 - Depois escolha como você deseja criar seu pipeline, yaml ou Editor Classico. (Nesse caso vamos criar por editor Classico)
+    **3** - Depois escolha como você deseja criar seu pipeline, yaml ou Editor Classico. (Nesse caso vamos criar por editor Classico)
     
     ![Untitled](imagens/Untitled.png)
     
     ![Untitled](imagens/Untitled%201.png)
     
-    4 - Podemos selecionar varios repos, Azure Repos, GitHub e etc. Mas nosso código está no Azure Repos.
+    **4** - Podemos selecionar varios repos, Azure Repos, GitHub e etc. Mas nosso código está no Azure Repos.
     
     - Agora temos que selecionar nosso projeto.
     - O repositorio que vamos utilizar.
     - E nossa branche com o código mais atual.
     
-    5 - E clicamos em continue
+    **5** - E clicamos em continue
     
     ![Untitled](imagens/Untitled%202.png)
     
-    6 - Podemos criar um Empty Job (um job em branco, sem nada) ou usar um template
-    7 - Nesse caso vamos usar um template, **ASP.NET**
+    **6** - Podemos criar um Empty Job (um job em branco, sem nada) ou usar um template
+    **7** - Nesse caso vamos usar um template, **ASP.NET**
     
     ![Untitled](imagens/Untitled%203.png)
     
-    8 - E assim está criado nosso build Classic Editor
+    **8** - E assim está criado nosso build Classic Editor
     
     - Temos nosso Agent Job
     - Nossas tasks
     - Nosso agent e s.o que vamos rodar
     
-    9 - Clique em Save & Queue
+    **9** - Clique em Save & Queue
     
     ![Untitled](imagens/Untitled%204.png)
     
-    10 - Pipeline finalizada
+    **10** - Pipeline finalizada
     
     ![Untitled](imagens/Untitled%205.png)
+
+    ##
+  
+- **Conectando o Azure DevOps com o Azure Portal.**
     
-- Conectando o Azure DevOps com o Azure Portal.
+    **1** - Acessamos nosso projeto no Azure DevOps.
     
-    1 - Acessamos nosso projeto no Azure DevOps.
-    
-    2 - Clique em **Project Settings** e depois clique em **Service Connections.**
+    **2** - Clique em **Project Settings** e depois clique em **Service Connections.**
     
     ![Untitled](imagens/Untitled%206.png)
     
-    3 - Clique em New Service connection e selecione o **Azure Resource Manager.**
+    **3** - Clique em New Service connection e selecione o **Azure Resource Manager.**
     
     ![Untitled](imagens/Untitled%207.png)
     
-    4 - Selecione como automatico e clique em **next.**
+    **4** - Selecione como automatico e clique em **next.**
     
     ![Untitled](imagens/Untitled%208.png)
     
-    5 - Agora vamos criar a Service connection.
+    **5** - Agora vamos criar a Service connection.
     
     Nota: Como minha conta Azure DevOps e Azure portal, utlizam o mesmo E-mail, ele já trouxe minha Subscription.
     
@@ -74,18 +78,20 @@ Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como cr
     5. Coloque um nome na sua Service connection e clique em Save.
     
     ![Untitled](imagens/Untitled%209.png)
+
+  ##
+  
+- **Criando um App Service no Azure Portal.**
     
-- Criando um App Service no Azure Portal.
-    
-    1 - Acesse o portal do Azure e pesquise por: App Service
+    **1** - Acesse o portal do Azure e pesquise por: App Service
     
     ![Untitled](imagens/Untitled%2010.png)
     
-    2 - Clique em Criar → Aplicativo Web.
+    **2** - Clique em Criar → Aplicativo Web.
     
     ![Untitled](imagens/Untitled%2011.png)
     
-    3 - Criando um App Service.
+    **3** - Criando um App Service.
     
     1. Selecionamos nossa Subscription e Resource Group, igual no Azure DevOps
     2. Coloque um nome para o App Service.
@@ -97,19 +103,21 @@ Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como cr
     
     ![Untitled](imagens/Untitled%2012.png)
     
-    4 - Pronto nosso App Service está criado.
+    **4** - Pronto nosso App Service está criado.
     
     ![Untitled](imagens/Untitled%2013.png)
+
+  ##
+  
+- **Criando uma Release no Azure DevOps.**
     
-- Criando uma Release no Azure DevOps.
+    **1** - Vá para o Azure → Pipelines → Releases
     
-    1 - Vá para o Azure → Pipelines → Releases
-    
-    2 - Clique em Create Release → Azure App Service.
+    **2** - Clique em Create Release → Azure App Service.
     
     ![Untitled](imagens/Untitled%2014.png)
     
-    3 - Clique em Artifacts → Add
+    **3** - Clique em Artifacts → Add
     
     1. Selecione Build → Projeto
     2. Selecione a nossa Build que ira gerar o artefato.
@@ -117,11 +125,11 @@ Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como cr
     
     ![Untitled](imagens/Untitled%2015.png)
     
-    4 - Clique no Stage → 1 job, 1 task
+    **4** - Clique no Stage → 1 job, 1 task
     
     ![Untitled](imagens/Untitled%2016.png)
     
-    5 - Configurando nossa release.
+    **5** - Configurando nossa release.
     
     1. Clique em Stage 1
     2. Selecione sua Azure Subscription (A mesma que está nosso recurso)
@@ -137,33 +145,33 @@ Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como cr
     
     ![Untitled](imagens/Untitled%2018.png)
     
-    6 - Clique na Task de Deploy Azure App Service e verique se as informações da task estão corretas.
+    **6** - Clique na Task de Deploy Azure App Service e verique se as informações da task estão corretas.
     
     - Em package or folder, selecione os arquivos dentro do Artefato, no caso os **Zip.**
     
     ![Untitled](imagens/Untitled%2019.png)
     
-    7 - Vá para a tela de pipeline e clique o raio que está no nosso artefato e clique em Enabled conforme imagem.
+    **7** - Vá para a tela de pipeline e clique o raio que está no nosso artefato e clique em Enabled conforme imagem.
     Essa opção fara com que, após rodar nossa build Pipeline, fara com que dispare a release automaticamente, criando nosso Deploy automatizado. 
     
     ![Untitled](imagens/Untitled%2020.png)
     
-    8 - Agora vá para pipelines e clique em **Run pipelines.** Após a conclusão da pipeline, ela ira disparar a release.
+    **8** - Agora vá para pipelines e clique em **Run pipelines.** Após a conclusão da pipeline, ela ira disparar a release.
     
     ![Untitled](imagens/Untitled%2021.png)
     
     ![Untitled](imagens/Untitled%2022.png)
     
-    9 - Acessando a parte de releases, ira verificar que a mesma está rodando sozinha, após o build finalizar.
+    **9** - Acessando a parte de releases, ira verificar que a mesma está rodando sozinha, após o build finalizar.
     
     ![Untitled](imagens/Untitled%2023.png)
     
-    10 - Agora acesse o Azure portal → App Service → Seu app service → Domínio padrão.
+    **10** - Agora acesse o Azure portal → App Service → Seu app service → Domínio padrão.
     Pronto foi realizado nosso Deploy e o mesmo já está funcionando
     
     ![Untitled](imagens/Untitled%2024.png)
     
-    11 - Pronto, feito o deploy da nossa aplicação.
+    **11** - Pronto, feito o deploy da nossa aplicação.
     
     ![Untitled](imagens/Untitled%2025.png)
     
