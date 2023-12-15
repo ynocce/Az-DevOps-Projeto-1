@@ -2,7 +2,7 @@
 
 Essa documentação tem como objetivo, orientar e mostrar passo-a-passo, como criar uma pipeline/release e fazer um deploy em um App Servicem, utilizando o Azure DevOps.
 
-- Criando uma Pipeline Classic Editor
+- Criando uma Pipeline Classic Editor.
     
     Primeiro acessamos o Azure DevOps.
     
